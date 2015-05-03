@@ -1,0 +1,915 @@
+
+Firebird-Rpi.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  000004dc  00000570  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000004dc  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000040  00800200  00800200  00000570  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000570  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000d8  00000000  00000000  000005a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000065c  00000000  00000000  00000678  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001fa  00000000  00000000  00000cd4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000647  00000000  00000000  00000ece  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000001c8  00000000  00000000  00001518  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000325  00000000  00000000  000016e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000fa  00000000  00000000  00001a05  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000c8  00000000  00000000  00001aff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	81 c0       	rjmp	.+258    	; 0x108 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	7f c0       	rjmp	.+254    	; 0x108 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	7d c0       	rjmp	.+250    	; 0x108 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	7b c0       	rjmp	.+246    	; 0x108 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	79 c0       	rjmp	.+242    	; 0x108 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	77 c0       	rjmp	.+238    	; 0x108 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	75 c0       	rjmp	.+234    	; 0x108 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	73 c0       	rjmp	.+230    	; 0x108 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	71 c0       	rjmp	.+226    	; 0x108 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	6f c0       	rjmp	.+222    	; 0x108 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	6d c0       	rjmp	.+218    	; 0x108 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	6b c0       	rjmp	.+214    	; 0x108 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	69 c0       	rjmp	.+210    	; 0x108 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	67 c0       	rjmp	.+206    	; 0x108 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	65 c0       	rjmp	.+202    	; 0x108 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	63 c0       	rjmp	.+198    	; 0x108 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	61 c0       	rjmp	.+194    	; 0x108 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	5f c0       	rjmp	.+190    	; 0x108 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	5d c0       	rjmp	.+186    	; 0x108 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	5b c0       	rjmp	.+182    	; 0x108 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	59 c0       	rjmp	.+178    	; 0x108 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	57 c0       	rjmp	.+174    	; 0x108 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	55 c0       	rjmp	.+170    	; 0x108 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	53 c0       	rjmp	.+166    	; 0x108 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	51 c0       	rjmp	.+162    	; 0x108 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	4f c0       	rjmp	.+158    	; 0x108 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	4d c0       	rjmp	.+154    	; 0x108 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	4b c0       	rjmp	.+150    	; 0x108 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	49 c0       	rjmp	.+146    	; 0x108 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	47 c0       	rjmp	.+142    	; 0x108 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	45 c0       	rjmp	.+138    	; 0x108 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	43 c0       	rjmp	.+134    	; 0x108 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	41 c0       	rjmp	.+130    	; 0x108 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	3f c0       	rjmp	.+126    	; 0x108 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	3d c0       	rjmp	.+122    	; 0x108 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	3b c0       	rjmp	.+118    	; 0x108 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	39 c0       	rjmp	.+114    	; 0x108 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	37 c0       	rjmp	.+110    	; 0x108 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	35 c0       	rjmp	.+106    	; 0x108 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	33 c0       	rjmp	.+102    	; 0x108 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	31 c0       	rjmp	.+98     	; 0x108 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	2f c0       	rjmp	.+94     	; 0x108 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	2d c0       	rjmp	.+90     	; 0x108 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	2b c0       	rjmp	.+86     	; 0x108 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	29 c0       	rjmp	.+82     	; 0x108 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	27 c0       	rjmp	.+78     	; 0x108 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	25 c0       	rjmp	.+74     	; 0x108 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	23 c0       	rjmp	.+70     	; 0x108 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	21 c0       	rjmp	.+66     	; 0x108 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	1f c0       	rjmp	.+62     	; 0x108 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	a3 c0       	rjmp	.+326    	; 0x214 <__vector_51>
+  ce:	00 00       	nop
+  d0:	1b c0       	rjmp	.+54     	; 0x108 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	19 c0       	rjmp	.+50     	; 0x108 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	17 c0       	rjmp	.+46     	; 0x108 <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	15 c0       	rjmp	.+42     	; 0x108 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	13 c0       	rjmp	.+38     	; 0x108 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_clear_bss>:
+  f4:	22 e0       	ldi	r18, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	01 c0       	rjmp	.+2      	; 0xfe <.do_clear_bss_start>
+
+000000fc <.do_clear_bss_loop>:
+  fc:	1d 92       	st	X+, r1
+
+000000fe <.do_clear_bss_start>:
+  fe:	a0 34       	cpi	r26, 0x40	; 64
+ 100:	b2 07       	cpc	r27, r18
+ 102:	e1 f7       	brne	.-8      	; 0xfc <.do_clear_bss_loop>
+ 104:	e6 d1       	rcall	.+972    	; 0x4d2 <main>
+ 106:	e8 c1       	rjmp	.+976    	; 0x4d8 <_exit>
+
+00000108 <__bad_interrupt>:
+ 108:	7b cf       	rjmp	.-266    	; 0x0 <__vectors>
+
+0000010a <buzzer_pin_config>:
+	PORTA = 0x0A;
+}
+
+void stop (void)
+{
+	PORTA = 0x00;
+ 10a:	3b 9a       	sbi	0x07, 3	; 7
+ 10c:	43 98       	cbi	0x08, 3	; 8
+ 10e:	08 95       	ret
+
+00000110 <motion_pin_config>:
+ 110:	81 b1       	in	r24, 0x01	; 1
+ 112:	8f 60       	ori	r24, 0x0F	; 15
+ 114:	81 b9       	out	0x01, r24	; 1
+ 116:	82 b1       	in	r24, 0x02	; 2
+ 118:	80 7f       	andi	r24, 0xF0	; 240
+ 11a:	82 b9       	out	0x02, r24	; 2
+ 11c:	ea e0       	ldi	r30, 0x0A	; 10
+ 11e:	f1 e0       	ldi	r31, 0x01	; 1
+ 120:	80 81       	ld	r24, Z
+ 122:	88 61       	ori	r24, 0x18	; 24
+ 124:	80 83       	st	Z, r24
+ 126:	eb e0       	ldi	r30, 0x0B	; 11
+ 128:	f1 e0       	ldi	r31, 0x01	; 1
+ 12a:	80 81       	ld	r24, Z
+ 12c:	88 61       	ori	r24, 0x18	; 24
+ 12e:	80 83       	st	Z, r24
+ 130:	08 95       	ret
+
+00000132 <adc_pin_config>:
+ 132:	10 ba       	out	0x10, r1	; 16
+ 134:	11 ba       	out	0x11, r1	; 17
+ 136:	10 92 07 01 	sts	0x0107, r1
+ 13a:	10 92 08 01 	sts	0x0108, r1
+ 13e:	08 95       	ret
+
+00000140 <port_init>:
+ 140:	e7 df       	rcall	.-50     	; 0x110 <motion_pin_config>
+ 142:	e3 df       	rcall	.-58     	; 0x10a <buzzer_pin_config>
+ 144:	f6 cf       	rjmp	.-20     	; 0x132 <adc_pin_config>
+ 146:	08 95       	ret
+
+00000148 <uart2_init>:
+ 148:	e1 ed       	ldi	r30, 0xD1	; 209
+ 14a:	f0 e0       	ldi	r31, 0x00	; 0
+ 14c:	10 82       	st	Z, r1
+ 14e:	10 92 d0 00 	sts	0x00D0, r1
+ 152:	86 e0       	ldi	r24, 0x06	; 6
+ 154:	80 93 d2 00 	sts	0x00D2, r24
+ 158:	8f e5       	ldi	r24, 0x5F	; 95
+ 15a:	80 93 d4 00 	sts	0x00D4, r24
+ 15e:	10 92 d5 00 	sts	0x00D5, r1
+ 162:	88 e9       	ldi	r24, 0x98	; 152
+ 164:	80 83       	st	Z, r24
+ 166:	08 95       	ret
+
+00000168 <adc_init>:
+ 168:	ea e7       	ldi	r30, 0x7A	; 122
+ 16a:	f0 e0       	ldi	r31, 0x00	; 0
+ 16c:	10 82       	st	Z, r1
+ 16e:	10 92 7b 00 	sts	0x007B, r1
+ 172:	80 e2       	ldi	r24, 0x20	; 32
+ 174:	80 93 7c 00 	sts	0x007C, r24
+ 178:	80 e8       	ldi	r24, 0x80	; 128
+ 17a:	80 bf       	out	0x30, r24	; 48
+ 17c:	86 e8       	ldi	r24, 0x86	; 134
+ 17e:	80 83       	st	Z, r24
+ 180:	08 95       	ret
+
+00000182 <timer5_init>:
+ 182:	e1 e2       	ldi	r30, 0x21	; 33
+ 184:	f1 e0       	ldi	r31, 0x01	; 1
+ 186:	10 82       	st	Z, r1
+ 188:	8f ef       	ldi	r24, 0xFF	; 255
+ 18a:	80 93 25 01 	sts	0x0125, r24
+ 18e:	91 e0       	ldi	r25, 0x01	; 1
+ 190:	90 93 24 01 	sts	0x0124, r25
+ 194:	10 92 29 01 	sts	0x0129, r1
+ 198:	80 93 28 01 	sts	0x0128, r24
+ 19c:	10 92 2b 01 	sts	0x012B, r1
+ 1a0:	80 93 2a 01 	sts	0x012A, r24
+ 1a4:	10 92 2d 01 	sts	0x012D, r1
+ 1a8:	80 93 2c 01 	sts	0x012C, r24
+ 1ac:	89 ea       	ldi	r24, 0xA9	; 169
+ 1ae:	80 93 20 01 	sts	0x0120, r24
+ 1b2:	8b e0       	ldi	r24, 0x0B	; 11
+ 1b4:	80 83       	st	Z, r24
+ 1b6:	08 95       	ret
+
+000001b8 <init_devices>:
+ 1b8:	f8 94       	cli
+ 1ba:	c2 df       	rcall	.-124    	; 0x140 <port_init>
+ 1bc:	c5 df       	rcall	.-118    	; 0x148 <uart2_init>
+ 1be:	d4 df       	rcall	.-88     	; 0x168 <adc_init>
+ 1c0:	e0 df       	rcall	.-64     	; 0x182 <timer5_init>
+ 1c2:	78 94       	sei
+ 1c4:	08 95       	ret
+
+000001c6 <ADC_Conversion>:
+ 1c6:	88 30       	cpi	r24, 0x08	; 8
+ 1c8:	18 f0       	brcs	.+6      	; 0x1d0 <ADC_Conversion+0xa>
+ 1ca:	98 e0       	ldi	r25, 0x08	; 8
+ 1cc:	90 93 7b 00 	sts	0x007B, r25
+ 1d0:	87 70       	andi	r24, 0x07	; 7
+ 1d2:	80 62       	ori	r24, 0x20	; 32
+ 1d4:	80 93 7c 00 	sts	0x007C, r24
+ 1d8:	10 92 3e 02 	sts	0x023E, r1
+ 1dc:	ea e7       	ldi	r30, 0x7A	; 122
+ 1de:	f0 e0       	ldi	r31, 0x00	; 0
+ 1e0:	80 81       	ld	r24, Z
+ 1e2:	80 64       	ori	r24, 0x40	; 64
+ 1e4:	80 83       	st	Z, r24
+ 1e6:	80 81       	ld	r24, Z
+ 1e8:	84 ff       	sbrs	r24, 4
+ 1ea:	fd cf       	rjmp	.-6      	; 0x1e6 <ADC_Conversion+0x20>
+ 1ec:	80 91 79 00 	lds	r24, 0x0079
+ 1f0:	ea e7       	ldi	r30, 0x7A	; 122
+ 1f2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1f4:	90 81       	ld	r25, Z
+ 1f6:	90 61       	ori	r25, 0x10	; 16
+ 1f8:	90 83       	st	Z, r25
+ 1fa:	10 92 7b 00 	sts	0x007B, r1
+ 1fe:	08 95       	ret
+
+00000200 <motor_enable>:
+ 200:	eb e0       	ldi	r30, 0x0B	; 11
+ 202:	f1 e0       	ldi	r31, 0x01	; 1
+ 204:	80 81       	ld	r24, Z
+ 206:	82 61       	ori	r24, 0x12	; 18
+ 208:	80 83       	st	Z, r24
+ 20a:	08 95       	ret
+
+0000020c <buzzer_on>:
+ 20c:	43 9a       	sbi	0x08, 3	; 8
+ 20e:	08 95       	ret
+
+00000210 <buzzer_off>:
+ 210:	43 98       	cbi	0x08, 3	; 8
+ 212:	08 95       	ret
+
+00000214 <__vector_51>:
+}
+
+//SIGNAL(SIG_USART2_RECV) 		// ISR for receive complete interrupt
+ISR(USART2_RX_vect)
+{
+ 214:	1f 92       	push	r1
+ 216:	0f 92       	push	r0
+ 218:	0f b6       	in	r0, 0x3f	; 63
+ 21a:	0f 92       	push	r0
+ 21c:	11 24       	eor	r1, r1
+ 21e:	0b b6       	in	r0, 0x3b	; 59
+ 220:	0f 92       	push	r0
+ 222:	2f 93       	push	r18
+ 224:	3f 93       	push	r19
+ 226:	8f 93       	push	r24
+ 228:	9f 93       	push	r25
+ 22a:	af 93       	push	r26
+ 22c:	bf 93       	push	r27
+ 22e:	ef 93       	push	r30
+ 230:	ff 93       	push	r31
+	rec_data = UDR2; 				//making copy of data from UDR2 in 'data' variable
+ 232:	90 91 d6 00 	lds	r25, 0x00D6
+ 236:	90 93 3d 02 	sts	0x023D, r25
+
+	while(!(UCSR2A && (1<<RXC2)));	// wait till data byte is received
+ 23a:	e0 ed       	ldi	r30, 0xD0	; 208
+ 23c:	f0 e0       	ldi	r31, 0x00	; 0
+ 23e:	80 81       	ld	r24, Z
+ 240:	88 23       	and	r24, r24
+ 242:	e9 f3       	breq	.-6      	; 0x23e <__vector_51+0x2a>
+	
+	if (data_packet_received == 0) 
+ 244:	80 91 07 02 	lds	r24, 0x0207
+ 248:	81 11       	cpse	r24, r1
+ 24a:	45 c0       	rjmp	.+138    	; 0x2d6 <__vector_51+0xc2>
+	{
+		if (rec_data == '\n' )			// '\n' decimal value is 10
+ 24c:	9a 30       	cpi	r25, 0x0A	; 10
+ 24e:	71 f4       	brne	.+28     	; 0x26c <__vector_51+0x58>
+		{
+			 //state = _second_last_byte 
+			uart_data_buff[i] = rec_data;
+ 250:	80 91 09 02 	lds	r24, 0x0209
+ 254:	e8 2f       	mov	r30, r24
+ 256:	f0 e0       	ldi	r31, 0x00	; 0
+ 258:	ec 5d       	subi	r30, 0xDC	; 220
+ 25a:	fd 4f       	sbci	r31, 0xFD	; 253
+ 25c:	90 83       	st	Z, r25
+			i++;
+ 25e:	8f 5f       	subi	r24, 0xFF	; 255
+ 260:	80 93 09 02 	sts	0x0209, r24
+			end_char_rec = 1;
+ 264:	81 e0       	ldi	r24, 0x01	; 1
+ 266:	80 93 0a 02 	sts	0x020A, r24
+ 26a:	35 c0       	rjmp	.+106    	; 0x2d6 <__vector_51+0xc2>
+		//	UDR2 = rec_data;
+		}
+
+		else 
+		{
+			if((end_char_rec == 1) && (rec_data == '\r'))		//'\r' indicates end of transmission. It should come after '\n'
+ 26c:	80 91 0a 02 	lds	r24, 0x020A
+ 270:	81 30       	cpi	r24, 0x01	; 1
+ 272:	39 f5       	brne	.+78     	; 0x2c2 <__vector_51+0xae>
+ 274:	9d 30       	cpi	r25, 0x0D	; 13
+ 276:	79 f5       	brne	.+94     	; 0x2d6 <__vector_51+0xc2>
+			{
+				uart_data_buff[i] = rec_data;
+ 278:	80 91 09 02 	lds	r24, 0x0209
+ 27c:	e8 2f       	mov	r30, r24
+ 27e:	f0 e0       	ldi	r31, 0x00	; 0
+ 280:	ec 5d       	subi	r30, 0xDC	; 220
+ 282:	fd 4f       	sbci	r31, 0xFD	; 253
+ 284:	90 83       	st	Z, r25
+				i++;
+ 286:	31 e0       	ldi	r19, 0x01	; 1
+ 288:	38 0f       	add	r19, r24
+ 28a:	30 93 09 02 	sts	0x0209, r19
+				end_char_rec = 2;
+ 28e:	92 e0       	ldi	r25, 0x02	; 2
+ 290:	90 93 0a 02 	sts	0x020A, r25
+				data_packet_received = 1;
+ 294:	91 e0       	ldi	r25, 0x01	; 1
+ 296:	90 93 07 02 	sts	0x0207, r25
+				
+				for (j = 0;j<i;j++)				// i value is stored in ISR
+ 29a:	10 92 08 02 	sts	0x0208, r1
+ 29e:	33 23       	and	r19, r19
+ 2a0:	d1 f0       	breq	.+52     	; 0x2d6 <__vector_51+0xc2>
+ 2a2:	ab e0       	ldi	r26, 0x0B	; 11
+ 2a4:	b2 e0       	ldi	r27, 0x02	; 2
+ 2a6:	e4 e2       	ldi	r30, 0x24	; 36
+ 2a8:	f2 e0       	ldi	r31, 0x02	; 2
+ 2aa:	90 e0       	ldi	r25, 0x00	; 0
+ 2ac:	84 5f       	subi	r24, 0xF4	; 244
+ 2ae:	9d 4f       	sbci	r25, 0xFD	; 253
+				{
+					copy_packet_data[j] = uart_data_buff[j];
+ 2b0:	20 81       	ld	r18, Z
+ 2b2:	2d 93       	st	X+, r18
+					//UDR2 = copy_packet_data[j];
+					uart_data_buff[j] = 0;
+ 2b4:	11 92       	st	Z+, r1
+				uart_data_buff[i] = rec_data;
+				i++;
+				end_char_rec = 2;
+				data_packet_received = 1;
+				
+				for (j = 0;j<i;j++)				// i value is stored in ISR
+ 2b6:	a8 17       	cp	r26, r24
+ 2b8:	b9 07       	cpc	r27, r25
+ 2ba:	d1 f7       	brne	.-12     	; 0x2b0 <__vector_51+0x9c>
+ 2bc:	30 93 08 02 	sts	0x0208, r19
+ 2c0:	0a c0       	rjmp	.+20     	; 0x2d6 <__vector_51+0xc2>
+																	// discard the data and check 
+			}
+		
+			else													// store other data bytes
+			{
+				uart_data_buff[i] = rec_data;
+ 2c2:	80 91 09 02 	lds	r24, 0x0209
+ 2c6:	e8 2f       	mov	r30, r24
+ 2c8:	f0 e0       	ldi	r31, 0x00	; 0
+ 2ca:	ec 5d       	subi	r30, 0xDC	; 220
+ 2cc:	fd 4f       	sbci	r31, 0xFD	; 253
+ 2ce:	90 83       	st	Z, r25
+				i++;
+ 2d0:	8f 5f       	subi	r24, 0xFF	; 255
+ 2d2:	80 93 09 02 	sts	0x0209, r24
+				velocity(left,right);
+				break;
+			}
+		} */
+	
+}	// end of ISR
+ 2d6:	ff 91       	pop	r31
+ 2d8:	ef 91       	pop	r30
+ 2da:	bf 91       	pop	r27
+ 2dc:	af 91       	pop	r26
+ 2de:	9f 91       	pop	r25
+ 2e0:	8f 91       	pop	r24
+ 2e2:	3f 91       	pop	r19
+ 2e4:	2f 91       	pop	r18
+ 2e6:	0f 90       	pop	r0
+ 2e8:	0b be       	out	0x3b, r0	; 59
+ 2ea:	0f 90       	pop	r0
+ 2ec:	0f be       	out	0x3f, r0	; 63
+ 2ee:	0f 90       	pop	r0
+ 2f0:	1f 90       	pop	r1
+ 2f2:	18 95       	reti
+
+000002f4 <send_sensor_data>:
+
+void send_sensor_data(void)
+{
+	if (device_id == 0x00)
+ 2f4:	80 91 05 02 	lds	r24, 0x0205
+ 2f8:	81 11       	cpse	r24, r1
+ 2fa:	03 c0       	rjmp	.+6      	; 0x302 <send_sensor_data+0xe>
+	{
+		UDR2 = ADC_Conversion(0);		// Battery Voltage
+ 2fc:	64 df       	rcall	.-312    	; 0x1c6 <ADC_Conversion>
+ 2fe:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x01)
+ 302:	80 91 05 02 	lds	r24, 0x0205
+ 306:	81 30       	cpi	r24, 0x01	; 1
+ 308:	19 f4       	brne	.+6      	; 0x310 <send_sensor_data+0x1c>
+	{
+		UDR2 = ADC_Conversion(1);		// right WL sensor
+ 30a:	5d df       	rcall	.-326    	; 0x1c6 <ADC_Conversion>
+ 30c:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x02)
+ 310:	80 91 05 02 	lds	r24, 0x0205
+ 314:	82 30       	cpi	r24, 0x02	; 2
+ 316:	19 f4       	brne	.+6      	; 0x31e <send_sensor_data+0x2a>
+	{
+		UDR2 = ADC_Conversion(2);		// Center WL sensor
+ 318:	56 df       	rcall	.-340    	; 0x1c6 <ADC_Conversion>
+ 31a:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x03)
+ 31e:	80 91 05 02 	lds	r24, 0x0205
+ 322:	83 30       	cpi	r24, 0x03	; 3
+ 324:	19 f4       	brne	.+6      	; 0x32c <send_sensor_data+0x38>
+	{
+		UDR2 = ADC_Conversion(3);		// left WL sensor
+ 326:	4f df       	rcall	.-354    	; 0x1c6 <ADC_Conversion>
+ 328:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x04)
+ 32c:	80 91 05 02 	lds	r24, 0x0205
+ 330:	84 30       	cpi	r24, 0x04	; 4
+ 332:	19 f4       	brne	.+6      	; 0x33a <send_sensor_data+0x46>
+	{
+		UDR2 = ADC_Conversion(4);		// IR Proximity sensor-1
+ 334:	48 df       	rcall	.-368    	; 0x1c6 <ADC_Conversion>
+ 336:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x05)
+ 33a:	80 91 05 02 	lds	r24, 0x0205
+ 33e:	85 30       	cpi	r24, 0x05	; 5
+ 340:	19 f4       	brne	.+6      	; 0x348 <send_sensor_data+0x54>
+	{
+		UDR2 = ADC_Conversion(5);		// IR Proximity sensor-2
+ 342:	41 df       	rcall	.-382    	; 0x1c6 <ADC_Conversion>
+ 344:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x06)
+ 348:	80 91 05 02 	lds	r24, 0x0205
+ 34c:	86 30       	cpi	r24, 0x06	; 6
+ 34e:	19 f4       	brne	.+6      	; 0x356 <send_sensor_data+0x62>
+	{
+		UDR2 = ADC_Conversion(6);		// IR Proximity sensor-3
+ 350:	3a df       	rcall	.-396    	; 0x1c6 <ADC_Conversion>
+ 352:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x07)
+ 356:	80 91 05 02 	lds	r24, 0x0205
+ 35a:	87 30       	cpi	r24, 0x07	; 7
+ 35c:	19 f4       	brne	.+6      	; 0x364 <send_sensor_data+0x70>
+	{
+		UDR2 = ADC_Conversion(7);		// IR Proximity sensor-4
+ 35e:	33 df       	rcall	.-410    	; 0x1c6 <ADC_Conversion>
+ 360:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x08)
+ 364:	80 91 05 02 	lds	r24, 0x0205
+ 368:	88 30       	cpi	r24, 0x08	; 8
+ 36a:	19 f4       	brne	.+6      	; 0x372 <send_sensor_data+0x7e>
+	{
+		UDR2 = ADC_Conversion(8);		// IR Proximity sensor-5
+ 36c:	2c df       	rcall	.-424    	; 0x1c6 <ADC_Conversion>
+ 36e:	80 93 d6 00 	sts	0x00D6, r24
+	}
+	
+	if (device_id == 0x09)
+ 372:	80 91 05 02 	lds	r24, 0x0205
+ 376:	89 30       	cpi	r24, 0x09	; 9
+ 378:	19 f4       	brne	.+6      	; 0x380 <send_sensor_data+0x8c>
+	{
+		UDR2 = ADC_Conversion(9);		// Sharp Sensor-1 
+ 37a:	25 df       	rcall	.-438    	; 0x1c6 <ADC_Conversion>
+ 37c:	80 93 d6 00 	sts	0x00D6, r24
+	}
+
+	if (device_id == 0x0A)
+ 380:	80 91 05 02 	lds	r24, 0x0205
+ 384:	8a 30       	cpi	r24, 0x0A	; 10
+ 386:	19 f4       	brne	.+6      	; 0x38e <send_sensor_data+0x9a>
+	{
+		UDR2 = ADC_Conversion(10);		// Sharp Sensor-2
+ 388:	1e df       	rcall	.-452    	; 0x1c6 <ADC_Conversion>
+ 38a:	80 93 d6 00 	sts	0x00D6, r24
+	}
+
+	if (device_id == 0x0B)
+ 38e:	80 91 05 02 	lds	r24, 0x0205
+ 392:	8b 30       	cpi	r24, 0x0B	; 11
+ 394:	19 f4       	brne	.+6      	; 0x39c <send_sensor_data+0xa8>
+	{
+		UDR2 = ADC_Conversion(11);		// Sharp Sensor-3
+ 396:	17 df       	rcall	.-466    	; 0x1c6 <ADC_Conversion>
+ 398:	80 93 d6 00 	sts	0x00D6, r24
+	}
+
+	if (device_id == 0x0C)
+ 39c:	80 91 05 02 	lds	r24, 0x0205
+ 3a0:	8c 30       	cpi	r24, 0x0C	; 12
+ 3a2:	19 f4       	brne	.+6      	; 0x3aa <send_sensor_data+0xb6>
+	{
+		UDR2 = ADC_Conversion(12);		// Sharp Sensor-4
+ 3a4:	10 df       	rcall	.-480    	; 0x1c6 <ADC_Conversion>
+ 3a6:	80 93 d6 00 	sts	0x00D6, r24
+	}
+
+	if (device_id == 0x0D)
+ 3aa:	80 91 05 02 	lds	r24, 0x0205
+ 3ae:	8d 30       	cpi	r24, 0x0D	; 13
+ 3b0:	19 f4       	brne	.+6      	; 0x3b8 <send_sensor_data+0xc4>
+	{
+		UDR2 = ADC_Conversion(13);		// Sharp Sensor-5
+ 3b2:	09 df       	rcall	.-494    	; 0x1c6 <ADC_Conversion>
+ 3b4:	80 93 d6 00 	sts	0x00D6, r24
+	}
+
+	if (device_id == 0x0E)
+ 3b8:	80 91 05 02 	lds	r24, 0x0205
+ 3bc:	8e 30       	cpi	r24, 0x0E	; 14
+ 3be:	59 f4       	brne	.+22     	; 0x3d6 <send_sensor_data+0xe2>
+	{
+		UDR2 = ADC_Conversion(14);		// Connected to servo pod
+ 3c0:	02 df       	rcall	.-508    	; 0x1c6 <ADC_Conversion>
+ 3c2:	80 93 d6 00 	sts	0x00D6, r24
+	}
+
+	if (device_id == 0x0E)
+ 3c6:	80 91 05 02 	lds	r24, 0x0205
+ 3ca:	8e 30       	cpi	r24, 0x0E	; 14
+ 3cc:	21 f4       	brne	.+8      	; 0x3d6 <send_sensor_data+0xe2>
+	{
+		UDR2 = ADC_Conversion(15);		// Connected to servo pod
+ 3ce:	8f e0       	ldi	r24, 0x0F	; 15
+ 3d0:	fa de       	rcall	.-524    	; 0x1c6 <ADC_Conversion>
+ 3d2:	80 93 d6 00 	sts	0x00D6, r24
+ 3d6:	08 95       	ret
+
+000003d8 <actuate_devices>:
+	}	
+}
+
+void actuate_devices(void)
+{
+	if (device_id == 0x01)				// Buzzer has device id = 1
+ 3d8:	80 91 05 02 	lds	r24, 0x0205
+ 3dc:	81 30       	cpi	r24, 0x01	; 1
+ 3de:	49 f4       	brne	.+18     	; 0x3f2 <actuate_devices+0x1a>
+	{
+		if (function_type == 0x00)
+ 3e0:	80 91 03 02 	lds	r24, 0x0203
+ 3e4:	81 11       	cpse	r24, r1
+ 3e6:	02 c0       	rjmp	.+4      	; 0x3ec <actuate_devices+0x14>
+		{
+			buzzer_on();
+ 3e8:	11 df       	rcall	.-478    	; 0x20c <buzzer_on>
+ 3ea:	03 c0       	rjmp	.+6      	; 0x3f2 <actuate_devices+0x1a>
+		}
+		else if (function_type == 0x01)
+ 3ec:	81 30       	cpi	r24, 0x01	; 1
+ 3ee:	a1 f5       	brne	.+104    	; 0x458 <actuate_devices+0x80>
+		{
+			buzzer_off();
+ 3f0:	0f df       	rcall	.-482    	; 0x210 <buzzer_off>
+		}
+	}
+	
+	if (device_id == 0x02)				// Motor has device id = 2
+ 3f2:	80 91 05 02 	lds	r24, 0x0205
+ 3f6:	82 30       	cpi	r24, 0x02	; 2
+ 3f8:	79 f5       	brne	.+94     	; 0x458 <actuate_devices+0x80>
+	{
+		if (function_type == 0x00)
+ 3fa:	80 91 03 02 	lds	r24, 0x0203
+ 3fe:	81 11       	cpse	r24, r1
+ 400:	04 c0       	rjmp	.+8      	; 0x40a <actuate_devices+0x32>
+		{
+			motor_enable();
+ 402:	fe de       	rcall	.-516    	; 0x200 <motor_enable>
+}
+
+void forward (void)
+{
+	//PORTA &= 0xF0;
+	PORTA = 0x06;
+ 404:	86 e0       	ldi	r24, 0x06	; 6
+ 406:	82 b9       	out	0x02, r24	; 2
+ 408:	08 95       	ret
+		if (function_type == 0x00)
+		{
+			motor_enable();
+			forward();
+		}
+		else if (function_type == 0x01)
+ 40a:	81 30       	cpi	r24, 0x01	; 1
+ 40c:	21 f4       	brne	.+8      	; 0x416 <actuate_devices+0x3e>
+		{
+			motor_enable();
+ 40e:	f8 de       	rcall	.-528    	; 0x200 <motor_enable>
+}
+
+void back (void)
+{
+	//PORTA &= 0xF0;
+	PORTA = 0x09;
+ 410:	89 e0       	ldi	r24, 0x09	; 9
+ 412:	82 b9       	out	0x02, r24	; 2
+ 414:	08 95       	ret
+		else if (function_type == 0x01)
+		{
+			motor_enable();
+			back();
+		}
+		else if (function_type == 0x02)
+ 416:	82 30       	cpi	r24, 0x02	; 2
+ 418:	21 f4       	brne	.+8      	; 0x422 <actuate_devices+0x4a>
+		{
+			motor_enable();
+ 41a:	f2 de       	rcall	.-540    	; 0x200 <motor_enable>
+}
+
+void right (void)
+{
+	//PORTA &= 0xF0;
+	PORTA = 0x0A;
+ 41c:	8a e0       	ldi	r24, 0x0A	; 10
+ 41e:	82 b9       	out	0x02, r24	; 2
+ 420:	08 95       	ret
+		else if (function_type == 0x02)
+		{
+			motor_enable();
+			right();
+		}
+		else if (function_type == 0x03)
+ 422:	83 30       	cpi	r24, 0x03	; 3
+ 424:	21 f4       	brne	.+8      	; 0x42e <actuate_devices+0x56>
+		{
+			motor_enable();
+ 426:	ec de       	rcall	.-552    	; 0x200 <motor_enable>
+}
+
+void left (void)
+{
+	//PORTA &= 0xF0;
+	PORTA = 0x05;
+ 428:	85 e0       	ldi	r24, 0x05	; 5
+ 42a:	82 b9       	out	0x02, r24	; 2
+ 42c:	08 95       	ret
+		else if (function_type == 0x03)
+		{
+			motor_enable();
+			left();
+		}
+		else if (function_type == 0x04)
+ 42e:	84 30       	cpi	r24, 0x04	; 4
+ 430:	19 f4       	brne	.+6      	; 0x438 <actuate_devices+0x60>
+		{
+			motor_enable();
+ 432:	e6 de       	rcall	.-564    	; 0x200 <motor_enable>
+	PORTA = 0x0A;
+}
+
+void stop (void)
+{
+	PORTA = 0x00;
+ 434:	12 b8       	out	0x02, r1	; 2
+ 436:	08 95       	ret
+		else if (function_type == 0x04)
+		{
+			motor_enable();
+			stop();
+		}
+		else if (function_type == 0x09)
+ 438:	89 30       	cpi	r24, 0x09	; 9
+ 43a:	71 f4       	brne	.+28     	; 0x458 <actuate_devices+0x80>
+}
+
+void forward (void)
+{
+	//PORTA &= 0xF0;
+	PORTA = 0x06;
+ 43c:	86 e0       	ldi	r24, 0x06	; 6
+ 43e:	82 b9       	out	0x02, r24	; 2
+			stop();
+		}
+		else if (function_type == 0x09)
+		{
+			forward();
+			UDR2 = param_1;
+ 440:	80 91 01 02 	lds	r24, 0x0201
+ 444:	80 93 d6 00 	sts	0x00D6, r24
+			velocity(param_1,param_2);
+ 448:	80 91 00 02 	lds	r24, 0x0200
+ 44c:	90 91 01 02 	lds	r25, 0x0201
+}
+
+// Function for robot velocity control
+void velocity (unsigned char left_motor, unsigned char right_motor)
+{
+	OCR5AL = (unsigned char)left_motor;
+ 450:	90 93 28 01 	sts	0x0128, r25
+	OCR5BL = (unsigned char)right_motor;
+ 454:	80 93 2a 01 	sts	0x012A, r24
+ 458:	08 95       	ret
+
+0000045a <decode_data>:
+	}
+}
+
+void decode_data(void)
+{
+	while (data_copied == 1)
+ 45a:	80 91 06 02 	lds	r24, 0x0206
+ 45e:	81 30       	cpi	r24, 0x01	; 1
+ 460:	61 f0       	breq	.+24     	; 0x47a <decode_data+0x20>
+		param_2 = copy_packet_data[5];
+		data_copied = 0;
+	//	UDR2 = 'D';
+	}
+	
+	if ((data_copied == 0) && (device_type == 0x00))	// input devices such as sensors, which will send back data
+ 462:	81 11       	cpse	r24, r1
+ 464:	25 c0       	rjmp	.+74     	; 0x4b0 <decode_data+0x56>
+ 466:	80 91 04 02 	lds	r24, 0x0204
+ 46a:	81 11       	cpse	r24, r1
+ 46c:	02 c0       	rjmp	.+4      	; 0x472 <decode_data+0x18>
+	{
+		send_sensor_data();
+ 46e:	42 cf       	rjmp	.-380    	; 0x2f4 <send_sensor_data>
+ 470:	08 95       	ret
+	}
+	
+	else if ((data_copied == 0) && (device_type == 0x01)) // output devices such as buzzer, motors
+ 472:	81 30       	cpi	r24, 0x01	; 1
+ 474:	e9 f4       	brne	.+58     	; 0x4b0 <decode_data+0x56>
+	{
+	//	UDR2 = 'A';
+		actuate_devices();
+ 476:	b0 cf       	rjmp	.-160    	; 0x3d8 <actuate_devices>
+ 478:	08 95       	ret
+
+void decode_data(void)
+{
+	while (data_copied == 1)
+	{
+		device_id = copy_packet_data[0];
+ 47a:	80 91 0b 02 	lds	r24, 0x020B
+ 47e:	80 93 05 02 	sts	0x0205, r24
+		device_type = copy_packet_data[1];
+ 482:	80 91 0c 02 	lds	r24, 0x020C
+ 486:	80 93 04 02 	sts	0x0204, r24
+		function_type = copy_packet_data[2];
+ 48a:	80 91 0d 02 	lds	r24, 0x020D
+ 48e:	80 93 03 02 	sts	0x0203, r24
+		param_count = copy_packet_data[3];
+ 492:	80 91 0e 02 	lds	r24, 0x020E
+ 496:	80 93 02 02 	sts	0x0202, r24
+		param_1 = copy_packet_data[4];
+ 49a:	80 91 0f 02 	lds	r24, 0x020F
+ 49e:	80 93 01 02 	sts	0x0201, r24
+		param_2 = copy_packet_data[5];
+ 4a2:	80 91 10 02 	lds	r24, 0x0210
+ 4a6:	80 93 00 02 	sts	0x0200, r24
+		data_copied = 0;
+ 4aa:	10 92 06 02 	sts	0x0206, r1
+ 4ae:	db cf       	rjmp	.-74     	; 0x466 <decode_data+0xc>
+ 4b0:	08 95       	ret
+
+000004b2 <copy_data_packet>:
+	}
+}
+
+void copy_data_packet()
+{
+	if (data_packet_received == 1)
+ 4b2:	80 91 07 02 	lds	r24, 0x0207
+ 4b6:	81 30       	cpi	r24, 0x01	; 1
+ 4b8:	59 f4       	brne	.+22     	; 0x4d0 <copy_data_packet+0x1e>
+		//{
+			//copy_packet_data[j] = uart_data_buff[j];
+			////UDR2 = copy_packet_data[j];
+			//uart_data_buff[j] = 0;
+		//}
+		i=0;
+ 4ba:	10 92 09 02 	sts	0x0209, r1
+		j=0;
+ 4be:	10 92 08 02 	sts	0x0208, r1
+		data_packet_received = 0;
+ 4c2:	10 92 07 02 	sts	0x0207, r1
+		end_char_rec = 0;
+ 4c6:	10 92 0a 02 	sts	0x020A, r1
+		data_copied = 1;
+ 4ca:	80 93 06 02 	sts	0x0206, r24
+		
+	//	UDR2 = data_copied;
+		decode_data();
+ 4ce:	c5 cf       	rjmp	.-118    	; 0x45a <decode_data>
+ 4d0:	08 95       	ret
+
+000004d2 <main>:
+
+
+//Main Function
+int main(void)
+{
+	init_devices();
+ 4d2:	72 de       	rcall	.-796    	; 0x1b8 <init_devices>
+	while(1)
+	{
+		copy_data_packet();
+ 4d4:	ee df       	rcall	.-36     	; 0x4b2 <copy_data_packet>
+ 4d6:	fe cf       	rjmp	.-4      	; 0x4d4 <main+0x2>
+
+000004d8 <_exit>:
+ 4d8:	f8 94       	cli
+
+000004da <__stop_program>:
+ 4da:	ff cf       	rjmp	.-2      	; 0x4da <__stop_program>

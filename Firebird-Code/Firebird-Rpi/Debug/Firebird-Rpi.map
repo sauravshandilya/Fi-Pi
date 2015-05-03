@@ -1,0 +1,558 @@
+Archive member included because of file (symbol)
+
+c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+                              c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o (exit)
+c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+                              Firebird-Rpi.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+ADC_flag            0x1               Firebird-Rpi.o
+data                0x1               Firebird-Rpi.o
+
+Discarded input sections
+
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+ .text          0x00000000        0x0 Firebird-Rpi.o
+ .bss           0x00000000        0x0 Firebird-Rpi.o
+ .text.velocity
+                0x00000000        0xa Firebird-Rpi.o
+ .text.forward  0x00000000        0x6 Firebird-Rpi.o
+ .text.back     0x00000000        0x6 Firebird-Rpi.o
+ .text.left     0x00000000        0x6 Firebird-Rpi.o
+ .text.right    0x00000000        0x6 Firebird-Rpi.o
+ .text.stop     0x00000000        0x4 Firebird-Rpi.o
+ .bss.param_3   0x00000000        0x1 Firebird-Rpi.o
+ .bss.state     0x00000000        0x1 Firebird-Rpi.o
+ .bss.right_motor_velocity
+                0x00000000        0x1 Firebird-Rpi.o
+ .bss.left_motor_velocity
+                0x00000000        0x1 Firebird-Rpi.o
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00800200         0x0000fe00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+LOAD Firebird-Rpi.o
+START GROUP
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6\libm.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6\libm.a
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6\libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x4dc
+ *(.vectors)
+ .vectors       0x00000000       0xe4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x000000e4                . = ALIGN (0x2)
+                0x000000e4                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000e4        0x0 linker stubs
+ *(.trampolines*)
+                0x000000e4                __trampolines_end = .
+ *(.progmem*)
+                0x000000e4                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000e4                __ctors_start = .
+ *(.ctors)
+                0x000000e4                __ctors_end = .
+                0x000000e4                __dtors_start = .
+ *(.dtors)
+                0x000000e4                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000e4        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+                0x000000e4                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000e4       0x10 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000f4       0x10 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+                0x000000f4                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000104        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+ *(.init9)
+ *(.text)
+ .text          0x00000108        0x2 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+                0x00000108                __vector_38
+                0x00000108                __vector_22
+                0x00000108                __vector_28
+                0x00000108                __vector_1
+                0x00000108                __vector_32
+                0x00000108                __vector_34
+                0x00000108                __vector_24
+                0x00000108                __vector_12
+                0x00000108                __vector_55
+                0x00000108                __vector_46
+                0x00000108                __bad_interrupt
+                0x00000108                __vector_6
+                0x00000108                __vector_31
+                0x00000108                __vector_35
+                0x00000108                __vector_39
+                0x00000108                __vector_3
+                0x00000108                __vector_23
+                0x00000108                __vector_30
+                0x00000108                __vector_45
+                0x00000108                __vector_25
+                0x00000108                __vector_11
+                0x00000108                __vector_54
+                0x00000108                __vector_13
+                0x00000108                __vector_17
+                0x00000108                __vector_19
+                0x00000108                __vector_56
+                0x00000108                __vector_7
+                0x00000108                __vector_49
+                0x00000108                __vector_41
+                0x00000108                __vector_43
+                0x00000108                __vector_27
+                0x00000108                __vector_5
+                0x00000108                __vector_33
+                0x00000108                __vector_47
+                0x00000108                __vector_52
+                0x00000108                __vector_37
+                0x00000108                __vector_4
+                0x00000108                __vector_44
+                0x00000108                __vector_9
+                0x00000108                __vector_2
+                0x00000108                __vector_21
+                0x00000108                __vector_15
+                0x00000108                __vector_36
+                0x00000108                __vector_29
+                0x00000108                __vector_40
+                0x00000108                __vector_8
+                0x00000108                __vector_26
+                0x00000108                __vector_48
+                0x00000108                __vector_14
+                0x00000108                __vector_53
+                0x00000108                __vector_10
+                0x00000108                __vector_50
+                0x00000108                __vector_16
+                0x00000108                __vector_18
+                0x00000108                __vector_20
+                0x00000108                __vector_42
+                0x0000010a                . = ALIGN (0x2)
+ *(.text.*)
+ .text.buzzer_pin_config
+                0x0000010a        0x6 Firebird-Rpi.o
+                0x0000010a                buzzer_pin_config
+ .text.motion_pin_config
+                0x00000110       0x22 Firebird-Rpi.o
+                0x00000110                motion_pin_config
+ .text.adc_pin_config
+                0x00000132        0xe Firebird-Rpi.o
+                0x00000132                adc_pin_config
+ .text.port_init
+                0x00000140        0x8 Firebird-Rpi.o
+                0x00000140                port_init
+ .text.uart2_init
+                0x00000148       0x20 Firebird-Rpi.o
+                0x00000148                uart2_init
+ .text.adc_init
+                0x00000168       0x1a Firebird-Rpi.o
+                0x00000168                adc_init
+ .text.timer5_init
+                0x00000182       0x36 Firebird-Rpi.o
+                0x00000182                timer5_init
+ .text.init_devices
+                0x000001b8        0xe Firebird-Rpi.o
+                0x000001b8                init_devices
+ .text.ADC_Conversion
+                0x000001c6       0x3a Firebird-Rpi.o
+                0x000001c6                ADC_Conversion
+ .text.motor_enable
+                0x00000200        0xc Firebird-Rpi.o
+                0x00000200                motor_enable
+ .text.buzzer_on
+                0x0000020c        0x4 Firebird-Rpi.o
+                0x0000020c                buzzer_on
+ .text.buzzer_off
+                0x00000210        0x4 Firebird-Rpi.o
+                0x00000210                buzzer_off
+ .text.__vector_51
+                0x00000214       0xe0 Firebird-Rpi.o
+                0x00000214                __vector_51
+ .text.send_sensor_data
+                0x000002f4       0xe4 Firebird-Rpi.o
+                0x000002f4                send_sensor_data
+ .text.actuate_devices
+                0x000003d8       0x82 Firebird-Rpi.o
+                0x000003d8                actuate_devices
+ .text.decode_data
+                0x0000045a       0x58 Firebird-Rpi.o
+                0x0000045a                decode_data
+ .text.copy_data_packet
+                0x000004b2       0x20 Firebird-Rpi.o
+                0x000004b2                copy_data_packet
+ .text.main     0x000004d2        0x6 Firebird-Rpi.o
+                0x000004d2                main
+                0x000004d8                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000004d8        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+                0x000004d8                _exit
+                0x000004d8                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000004d8        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ *(.fini0)
+                0x000004dc                _etext = .
+
+.data           0x00800200        0x0 load address 0x000004dc
+                0x00800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800200        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr6/crtm2560.o
+ .data          0x00800200        0x0 Firebird-Rpi.o
+ .data          0x00800200        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_exit.o)
+ .data          0x00800200        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr6\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800200                . = ALIGN (0x2)
+                0x00800200                _edata = .
+                0x00800200                PROVIDE (__data_end, .)
+
+.bss            0x00800200       0x40
+                0x00800200                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.param_2   0x00800200        0x1 Firebird-Rpi.o
+                0x00800200                param_2
+ .bss.param_1   0x00800201        0x1 Firebird-Rpi.o
+                0x00800201                param_1
+ .bss.param_count
+                0x00800202        0x1 Firebird-Rpi.o
+                0x00800202                param_count
+ .bss.function_type
+                0x00800203        0x1 Firebird-Rpi.o
+                0x00800203                function_type
+ .bss.device_type
+                0x00800204        0x1 Firebird-Rpi.o
+                0x00800204                device_type
+ .bss.device_id
+                0x00800205        0x1 Firebird-Rpi.o
+                0x00800205                device_id
+ .bss.data_copied
+                0x00800206        0x1 Firebird-Rpi.o
+                0x00800206                data_copied
+ .bss.data_packet_received
+                0x00800207        0x1 Firebird-Rpi.o
+                0x00800207                data_packet_received
+ .bss.j         0x00800208        0x1 Firebird-Rpi.o
+                0x00800208                j
+ .bss.i         0x00800209        0x1 Firebird-Rpi.o
+                0x00800209                i
+ .bss.end_char_rec
+                0x0080020a        0x1 Firebird-Rpi.o
+                0x0080020a                end_char_rec
+ .bss.copy_packet_data
+                0x0080020b       0x19 Firebird-Rpi.o
+                0x0080020b                copy_packet_data
+ .bss.uart_data_buff
+                0x00800224       0x19 Firebird-Rpi.o
+                0x00800224                uart_data_buff
+ .bss.rec_data  0x0080023d        0x1 Firebird-Rpi.o
+                0x0080023d                rec_data
+ *(COMMON)
+ COMMON         0x0080023e        0x2 Firebird-Rpi.o
+                0x0080023e                ADC_flag
+                0x0080023f                data
+                0x00800240                PROVIDE (__bss_end, .)
+                0x000004dc                __data_load_start = LOADADDR (.data)
+                0x000004dc                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800240        0x0
+                0x00800240                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800240                PROVIDE (__noinit_end, .)
+                0x00800240                _end = .
+                0x00800240                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 Firebird-Rpi.o
+                                 0x31 (size before relaxing)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xd8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xd8 Firebird-Rpi.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x65c
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x65c Firebird-Rpi.o
+
+.debug_abbrev   0x00000000      0x1fa
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1fa Firebird-Rpi.o
+
+.debug_line     0x00000000      0x647
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x647 Firebird-Rpi.o
+
+.debug_frame    0x00000000      0x1c8
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x1c8 Firebird-Rpi.o
+
+.debug_str      0x00000000      0x325
+ *(.debug_str)
+ .debug_str     0x00000000      0x325 Firebird-Rpi.o
+                                0x367 (size before relaxing)
+
+.debug_loc      0x00000000       0xfa
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xfa Firebird-Rpi.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0xc8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0xc8 Firebird-Rpi.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(Firebird-Rpi.elf elf32-avr)
+LOAD linker stubs

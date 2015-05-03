@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Firebird-Rpi", "Firebird-Rpi\Firebird-Rpi.cproj", "{47F4E6C5-3CA6-483D-91AA-D2D112E78C75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47F4E6C5-3CA6-483D-91AA-D2D112E78C75}.Debug|AVR.ActiveCfg = Debug|AVR
+		{47F4E6C5-3CA6-483D-91AA-D2D112E78C75}.Debug|AVR.Build.0 = Debug|AVR
+		{47F4E6C5-3CA6-483D-91AA-D2D112E78C75}.Release|AVR.ActiveCfg = Release|AVR
+		{47F4E6C5-3CA6-483D-91AA-D2D112E78C75}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
