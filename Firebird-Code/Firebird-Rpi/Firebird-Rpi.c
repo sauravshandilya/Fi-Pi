@@ -39,6 +39,11 @@ unsigned char device_type = 0;
 unsigned char function_type = 0;
 unsigned char param_count = 0;
 unsigned char param_1 = 0, param_2 = 0, param_3 = 0;
+
+volatile unsigned long int ShaftCountLeft = 0; //to keep track of left position encoder
+volatile unsigned long int ShaftCountRight = 0; //to keep track of right position encoder
+volatile unsigned int Degrees; //to accept angle in degrees for turning
+
 //*****************************
 void buzzer_pin_config (void)
 {
@@ -54,6 +59,20 @@ void motion_pin_config (void)
 	PORTL = PORTL | 0x18; //PL3 and PL4 pins are for velocity control using PWM.
 }
 
+//Function to configure INT4 (PORTE 4) pin as input for the left position encoder
+void left_encoder_pin_config (void)
+{
+	DDRE  = DDRE & 0xEF;  //Set the direction of the PORTE 4 pin as input
+	PORTE = PORTE | 0x10; //Enable internal pull-up for PORTE 4 pin
+}
+
+//Function to configure INT5 (PORTE 5) pin as input for the right position encoder
+void right_encoder_pin_config (void)
+{
+	DDRE  = DDRE & 0xDF;  //Set the direction of the PORTE 4 pin as input
+	PORTE = PORTE | 0x20; //Enable internal pull-up for PORTE 4 pin
+}
+
 //ADC pin configuration
 void adc_pin_config (void)
 {
@@ -63,11 +82,14 @@ void adc_pin_config (void)
 	PORTK = 0x00; //set PORTK pins floating
 }
 
+
 //Function to initialize ports
 void port_init()
 {
 	motion_pin_config();
 	buzzer_pin_config();
+	left_encoder_pin_config();
+	right_encoder_pin_config();
 	adc_pin_config();
 }
 
@@ -119,6 +141,35 @@ void timer5_init()
 	TCCR5B = 0x0B;	//WGM12=1; CS12=0, CS11=1, CS10=1 (Prescaler=64)
 }
 
+void left_position_encoder_interrupt_init (void) //Interrupt 4 enable
+{
+	cli(); //Clears the global interrupt
+	EICRB = EICRB | 0x02; // INT4 is set to trigger with falling edge
+	EIMSK = EIMSK | 0x10; // Enable Interrupt INT4 for left position encoder
+	sei();   // Enables the global interrupt
+}
+
+void right_position_encoder_interrupt_init (void) //Interrupt 5 enable
+{
+	cli(); //Clears the global interrupt
+	EICRB = EICRB | 0x08; // INT5 is set to trigger with falling edge
+	EIMSK = EIMSK | 0x20; // Enable Interrupt INT5 for right position encoder
+	sei();   // Enables the global interrupt
+}
+
+//ISR for right position encoder
+ISR(INT5_vect)
+{
+	ShaftCountRight++;  //increment right shaft position count
+}
+
+
+//ISR for left position encoder
+ISR(INT4_vect)
+{
+	ShaftCountLeft++;  //increment left shaft position count
+}
+
 //Function To Initialize all The Devices
 void init_devices()
 {
@@ -127,6 +178,8 @@ void init_devices()
 	uart2_init(); //Initialize UART1 for serial communication
 	adc_init(); 
 	timer5_init();
+	left_position_encoder_interrupt_init();
+	right_position_encoder_interrupt_init();
 	sei();   //Enables the global interrupts
 } 
 
@@ -199,6 +252,39 @@ void right (void)
 void stop (void)
 {
 	PORTA = 0x00;
+}
+
+//Function used for moving robot forward by specified distance
+
+void linear_distance_mm(unsigned int DistanceInMM)
+{
+	float ReqdShaftCount = 0;
+	unsigned long int ReqdShaftCountInt = 0;
+
+	ReqdShaftCount = DistanceInMM / 5.338; // division by resolution to get shaft count
+	ReqdShaftCountInt = (unsigned long int) ReqdShaftCount;
+	
+	ShaftCountRight = 0;
+	while(1)
+	{
+		if(ShaftCountRight > ReqdShaftCountInt)
+		{
+			break;
+		}
+	}
+	stop(); //Stop robot
+}
+
+void forward_mm(unsigned int DistanceInMM)
+{
+	forward();
+	linear_distance_mm(DistanceInMM);
+}
+
+void back_mm(unsigned int DistanceInMM)
+{
+	back();
+	linear_distance_mm(DistanceInMM);
 }
 
 //SIGNAL(SIG_USART2_RECV) 		// ISR for receive complete interrupt
@@ -456,9 +542,21 @@ void actuate_devices(void)
 		else if (function_type == 0x09)
 		{
 			forward();
-			UDR2 = param_1;
+			//UDR2 = param_1;
 			velocity(param_1,param_2);
 			
+		}	
+	}
+	if (device_id == 0x03)				// position encoder
+	{
+		if (function_type == 0x00)
+		{
+			forward_mm(param_1);
+		}
+		
+		if (function_type == 0x01 )
+		{
+			back_mm(param_1);
 		}
 	}
 }
