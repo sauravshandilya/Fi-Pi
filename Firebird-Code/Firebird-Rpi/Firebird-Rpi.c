@@ -38,7 +38,11 @@ unsigned char device_id = 0;
 unsigned char device_type = 0;
 unsigned char function_type = 0;
 unsigned char param_count = 0;
-unsigned char param_1 = 0, param_2 = 0, param_3 = 0;
+unsigned char param_count_upper_nibbel;
+unsigned char param_count_lower_nibbel;
+unsigned char temp_1;							//for data > 8 bit
+unsigned char temp_2;							//for data > 8 bit
+unsigned int param_1 = 0, param_2 = 0, param_3 = 0;
 
 volatile unsigned long int ShaftCountLeft = 0; //to keep track of left position encoder
 volatile unsigned long int ShaftCountRight = 0; //to keep track of right position encoder
@@ -569,8 +573,32 @@ void decode_data(void)
 		device_type = copy_packet_data[1];
 		function_type = copy_packet_data[2];
 		param_count = copy_packet_data[3];
-		param_1 = copy_packet_data[4];
-		param_2 = copy_packet_data[5];
+		param_count_upper_nibbel = param_count & 0x10;
+		param_count_lower_nibbel = (unsigned char)(param_count & 0x0F);
+		
+		if ((param_count & 0x10) == 0x10)
+		{
+			temp_1 = copy_packet_data[4];
+			temp_2 = copy_packet_data[5];
+			
+			param_1 = 256*temp_2 + temp_1;	
+		}
+		
+		else
+		{
+			switch (param_count_lower_nibbel)
+			{
+				case 1:
+				param_1 = copy_packet_data[4];
+				break;
+				case 2:
+				param_1 = copy_packet_data[4];
+				param_2 = copy_packet_data[5];
+				break;
+				//default:
+				//param_1 = copy_packet_data[4];
+			}
+		}
 		data_copied = 0;
 	//	UDR2 = 'D';
 	}

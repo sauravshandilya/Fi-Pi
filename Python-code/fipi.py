@@ -63,6 +63,9 @@ def serial_open():
 		print "No USB port detected....check connection"
 		sys.exit(0)		# stop program execution when exception occur
 
+def serial_close():
+	port.close()
+	
 def forward ():
 	 print "In forward"
 	 data = []
@@ -192,8 +195,16 @@ def forward_mm(distanceinmm):
 	data.append(chr(device_id))
 	data.append(chr(device_type))
 	data.append(chr(function_type))
-	data.append(chr(param_count))
-	data.append(chr(param_1)) 
+	if distanceinmm > 255:
+		param_1_1 = distanceinmm%256
+		param_1_2 = distanceinmm/256
+		data.append(chr(param_count + 16)) 	# adding 16 = 0x10 => if value to be sent over UART > 8 bits
+		data.append(chr(param_1_1))
+		data.append(chr(param_1_2))
+	else: 
+		param_1 = distanceinmm
+		data.append(chr(param_count))
+		data.append(chr(param_1))
 	data.append("\n")
 	data.append("\r") 
 	 
@@ -204,6 +215,34 @@ def forward_mm(distanceinmm):
 	return
 
 def back_mm(distanceinmm):
+	data = []
+	device_id = 3
+	device_type = 1
+	function_type = 1
+	param_count = 1
+	param_1 = distanceinmm
+	data.append(chr(device_id))
+	data.append(chr(device_type))
+	data.append(chr(function_type))
+	if distanceinmm > 255:
+		param_1_1 = distanceinmm%256
+		param_1_2 = distanceinmm/256
+		data.append(chr(param_count + 16)) 	# adding 16 = 0x10 => if value to be sent over UART > 8 bits
+		data.append(chr(param_1_1))
+		data.append(chr(param_1_2))
+	else: 
+		param_1 = distanceinmm
+		data.append(chr(param_count))
+		data.append(chr(param_1))
+	data.append("\n")
+	data.append("\r") 
+	 
+	for i in range(0,len(data)):
+		port.write(str(data[i]))
+		print str(data[i])
+	print "packet sent is ", str(data)
+	return	
+
 	data = []
 	device_id = 3
 	device_type = 1
